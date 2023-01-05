@@ -24,8 +24,8 @@ See the function `Makie.streamplot_impl` for implementation details.
             maxsteps = 500,
             colormap = theme(scene, :colormap),
             colorrange = Makie.automatic,
-            arrow_size = 15,
-            arrow_head = automatic,
+            arrowsize = 15,
+            arrowhead = automatic,
             density = 1.0,
             quality = 16
         ),
@@ -202,8 +202,8 @@ function plot!(p::StreamPlot)
 
     scatterfun(N)(
         p,
-        lift(first, data), markersize = p.arrow_size,
-        marker = @lift(arrow_head(N, $(p.arrow_head), $(p.quality))),
+        lift(first, data), markersize = p.arrowsize,
+        marker = @lift(arrow_head(N, $(p.arrowhead), $(p.quality))),
         color = lift(x-> x[4], data), rotations = rotations,
         colormap = p.colormap, colorrange = p.colorrange,
         inspectable = p.inspectable, transparency = p.transparency

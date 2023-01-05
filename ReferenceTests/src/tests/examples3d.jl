@@ -477,7 +477,7 @@ let
             P.γ * x[1] - x[3] - P.β,
         )
         f(x) = f(x, P)
-        streamplot(f, -1.5..1.5, -1.5..1.5, -1.5..1.5, colormap=:magma, gridsize=(10, 10), arrow_size=0.1, transparency=true)
+        streamplot(f, -1.5..1.5, -1.5..1.5, -1.5..1.5, colormap=:magma, gridsize=(10, 10), arrowsize=0.1, transparency=true)
     end
 end
 
